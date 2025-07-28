@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <a href="home.html">yn_k</a>
+      <a href="">yn_k</a>
     </div>
   )
 }
