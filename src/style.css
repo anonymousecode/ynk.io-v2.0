@@ -37,7 +37,15 @@ body{
 }
 
 
-/* home-page */
+@media (min-width: 1400px) {
+  .container-fluid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+
+/* home-page start */
 
 #rotating-title {
       font-size: 2rem;
@@ -69,13 +77,297 @@ body{
   }
 }
 
+/* end homepage */
 
 
+/* education page start */
 
+.academic-section {
+  margin-top: 80px;
+  padding: 0 20px;
+}
 
-@media (min-width: 1400px) {
-  .container-fluid {
-    padding-left: 4rem;
-    padding-right: 4rem;
+/* Card container vertical layout */
+.card-container.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card style */
+.card {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Card header flex (Year & CGPA) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background-color: transparent !important; 
+}
+
+.card-header h2 {
+  font-size: 1rem;
+  color: #f7934c;
+}
+
+.cgpa {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Title and text */
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+/* For tablets and smaller devices */
+@media (max-width: 992px) {
+  .card {
+    width: 95%;
+    padding: 18px 24px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 576px) {
+  .academic-section {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 16px 20px;
+  }
+
+  .card-header {
+    flex-direction: column;   /* Stack Year and CGPA vertically */
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .card-header h2 {
+    font-size: 0.95rem;
+  }
+
+  .cgpa {
+    font-size: 0.85rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* end education page */
+
+/* experience page start */
+
+/* ================================
+   EXPERIENCE TIMELINE (HORIZONTAL)
+   ================================ */
+
+.experience-horizontal-timeline {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;           /* prevent wrapping */
+  justify-content: center;     /* center if few cards */
+  gap: 40px;
+  padding: 80px 20px 60px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;            /* scroll horizontally when needed */
+  scroll-behavior: smooth;
+}
+
+.experience-horizontal-timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.experience-horizontal-timeline::-webkit-scrollbar-thumb {
+  background-color: #f7934c;
+  border-radius: px;
+}
+
+/* Timeline line behind cards */
+.experience-horizontal-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f7934c;
+  border-radius: 2px;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+/* Timeline card wrapper */
+.experience-timeline-card {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 300px; /* Default desktop width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card styles */
+.experience-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  min-height: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Company logo */
+.experience-company-logo {
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Role text */
+.experience-role {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Type (Full time / Internship) */
+.experience-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Company name */
+.experience-company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* Location text */
+.experience-location {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Year below the card */
+.experience-timeline-year {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #f7934c;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+   ================================ */
+
+/* Large screens (1024px–1440px) */
+@media (max-width: 1440px) {
+  .experience-timeline-card {
+    flex: 0 0 280px;
+  }
+}
+
+/* Medium screens (tablets, 481px–1024px) */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .experience-horizontal-timeline {
+    justify-content: flex-start;   /* Align cards to start for proper scroll */
+    padding: 60px 10px;            /* Reduce padding to fit better */
+  }
+
+  .experience-timeline-card {
+    flex: 0 0 240px;               /* Smaller width for tablets */
+  }
+}
+/* Mobile: vertical layout (≤480px) */
+@media (max-width: 480px) {
+  .experience-horizontal-timeline {
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 40px 20px;
+  }
+
+  .experience-horizontal-timeline::before {
+    display: none;
+  }
+
+  .experience-timeline-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+    flex: none; /* reset fixed width for vertical */
+  }
+
+  .experience-card {
+    min-height: auto;
+  }
+
+  .experience-company-logo {
+    max-height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .experience-role {
+    font-size: 1rem;
+  }
+
+  .experience-company,
+  .experience-location,
+  .experience-type {
+    font-size: 0.85rem;
   }
 }
