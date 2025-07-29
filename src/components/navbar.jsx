@@ -22,16 +22,16 @@ export default function Navbar() {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Timeline</a>
+                            <a className="nav-link" href="/journey">Journey</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Capabilities</a>
+                            <a className="nav-link" href="/skills">Skills</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Works</a>
+                            <a className="nav-link" href="/works">Works</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Connect</a>
+                            <a className="nav-link" href="/connect">Connect</a>
                         </li>
                     </ul>
                 </div>
