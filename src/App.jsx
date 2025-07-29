@@ -4,7 +4,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
 
 import Home from './components/home'
-import Journey from './components/journey'
+import About from './components/about'
+import Experience from './components/experience'
+import Education from './components/education'
 import Skills from './components/skills'
 import Works from './components/works'
 import Connect from './components/connect'
@@ -26,7 +28,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Start/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/journey" element={<Journey/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/experience" element={<Experience/>}/>
+          <Route path="/education" element={<Education/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/works" element={<Works/>}/>
           <Route path="/connect" element={<Connect/>}/>

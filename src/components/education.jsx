@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 
-export default function Journey() {
+export default function Education() {
     return (
         <div>
             <Navbar />
