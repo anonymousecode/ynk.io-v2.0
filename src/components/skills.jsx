@@ -34,7 +34,6 @@ export default function Skills() {
         { name: "GitHub", icon: SiGithub },
         { name: "Visual Studio Code", icon: VscVscode }
     ]
-
   };
 
   return (
