@@ -20,6 +20,16 @@ body{
    color: black;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;     /* IE and Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+
 .link{
   color: black;
   text-decoration: none;
@@ -369,5 +379,79 @@ body{
   .experience-location,
   .experience-type {
     font-size: 0.85rem;
+  }
+}
+
+/* end experience page */
+
+/* skills page start */
+
+/* Skills Section Wrapper */
+.skills-section {
+  max-width: 1100px;
+  margin: 80px auto 40px; /* space above skills heading */
+  padding: 0 20px;
+  text-align: center; /* center text alignment for entire section */
+}
+
+
+
+/* Category Block */
+.skills-section-category {
+  margin-bottom: 40px;
+}
+
+/* Category Title */
+.skills-category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f7934c;
+}
+
+/* Skills Container (center items) */
+.skills-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  justify-content: center; /* center horizontally */
+}
+
+/* Single Skill */
+.skills-item {
+  display: flex;
+  flex-direction: column; /* icon on top, text below */
+  align-items: center;
+  width: 100px;
+}
+
+/* Icon styling */
+.skills-icon {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills-item:hover .skills-icon {
+  transform: scale(1.1);
+  color: #f7934c;
+}
+
+/* Skill Name */
+.skills-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-item {
+    width: 80px;
+  }
+
+  .skills-icon {
+    font-size: 2rem;
   }
 }
