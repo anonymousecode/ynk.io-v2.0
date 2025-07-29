@@ -1,4 +1,4 @@
-import './App.css'
+import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
