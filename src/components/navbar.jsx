@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
     return(
         <div>
@@ -19,26 +21,26 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto me-4">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/home">Home</a>
+                            <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">About</a>
+                            <Link className="nav-link" to="/about">About</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/experience">Experience</a>
+                            <Link className="nav-link" to="/experience">Experience</Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="/education">Education</a>
+                            <Link className="nav-link" to="/education">Education</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/skills">Skills</a>
+                            <Link className="nav-link" to="/skills">Skills</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/works">Works</a>
+                            <Link className="nav-link" to="/works">Works</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/connect">Connect</a>
+                            <Link className="nav-link" to="/connect">Connect</Link>
                         </li>
                     </ul>
                 </div>
