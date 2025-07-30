@@ -93,66 +93,62 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="d-flex justify-content-center gap-3 mt-4">
-          <Link
-            to="https://www.linkedin.com/in/yathunadh-krishnan-p-u-280883233"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiLinkedin />
-          </Link>
+<div className="d-flex justify-content-center gap-5  mt-4 flex-wrap">
+  <Link
+    to="https://www.linkedin.com/in/yathunadh-krishnan-p-u-280883233"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiLinkedin />
+  </Link>
 
-          <Link
-            to="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiFacebook />
-          </Link>
+  <Link
+    to="https://www.facebook.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiFacebook />
+  </Link>
 
-          <Link
-            to="https://github.com/anonymousecode"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiGithub />
-          </Link>
+  <Link
+    to="https://github.com/anonymousecode"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiGithub />
+  </Link>
 
-          <Link
-            to="https://www.instagram.com/_yn_k_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn "
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiInstagram />
-          </Link>
+  <Link
+    to="https://www.instagram.com/_yn_k_/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiInstagram />
+  </Link>
 
-          <Link
-            to="https://leetcode.com/u/anonymousecode01/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiLeetcode />
-          </Link>
-          <Link
-            to="https://www.behance.net/anonymousecode/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ fontSize: "1.5rem" }}
-          >
-            <SiBehance />
-          </Link>
-        </div>
+  <Link
+    to="https://leetcode.com/u/anonymousecode01/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiLeetcode />
+  </Link>
+
+  <Link
+    to="https://www.behance.net/anonymousecode/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-dark fs-3 fs-md-2"
+  >
+    <SiBehance />
+  </Link>
+</div>
+
 
       </div>
     </div>
