@@ -1,7 +1,9 @@
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
+import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import Home from './components/home'
 import About from './components/about'
@@ -14,10 +16,34 @@ import Connect from './components/connect'
 
 
 function Start() {
+  const greetings = ['hi','hello','namaste','namaskaram','vanakam'];
+  const [index,setIndex]= useState(0);
+  const [showLink,setShowLink]=useState(false);
+  const navigate = useNavigate();
+
+  useEffect(()=> {
+    if (index < greetings.length){
+
+      const timer = setTimeout(()=>{setIndex(prev=>prev+1);},500);
+      return () => clearTimeout(timer);
+    }
+    else{
+      const redirectTimer = setTimeout(()=>{
+        navigate('/home');
+      },0);
+      return () => clearTimeout(redirectTimer);
+
+    }
+  },[index,greetings.length]);
+
   return (
-    <div>
-        <Link to="/home" className='link'>yn_k</Link>
+    <div style={{ textAlign: 'center', marginTop: '20vh', fontSize: '2rem' }}>
+      {!showLink?(
+        <div>{greetings[index]}</div>
+      ):(
+      <Link to="/home" className='link' style={{ fontSize: '2.5rem', fontWeight: 'bold', textDecoration: 'none' }}>yn_k</Link>)}
     </div>
+        
   );
 }
 
