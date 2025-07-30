@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { SiInstagram, SiFacebook, SiGithub, SiLinkedin, SiLeetcode } from "react-icons/si"; 
+import { SiInstagram, SiFacebook, SiGithub, SiLinkedin, SiLeetcode, SiBehance } from "react-icons/si"; 
 import Navbar from './navbar.jsx';
 import '../style.css';
 
@@ -142,6 +142,15 @@ export default function Home() {
             style={{ fontSize: "1.5rem" }}
           >
             <SiLeetcode />
+          </Link>
+          <Link
+            to="https://www.behance.net/anonymousecode/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiBehance />
           </Link>
         </div>
 
