@@ -5,7 +5,7 @@ export default function Navbar() {
         <div>
             <nav className="navbar navbar-expand-lg fixed-top">
                 <div className="container-fluid">
-                    <h1 className="ms-4 fw-semibold">yn_k</h1>
+                    <h1 className="ms-4 fw-semibold lacquer">yn_k</h1>
 
                     <button
                         className="navbar-toggler"
@@ -19,13 +19,13 @@ export default function Navbar() {
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto me-4">
+                    <ul className="navbar-nav ms-auto me-4 space-grotesk">
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link" to="/experience">Experience</Link>
                         </li>

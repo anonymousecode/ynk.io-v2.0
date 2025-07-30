@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { SiInstagram, SiFacebook, SiGithub, SiLinkedin, SiLeetcode } from "react-icons/si"; 
 import Navbar from './navbar.jsx';
 import '../style.css';
 
@@ -91,20 +93,58 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="social mt-4 text-center">
-          <a href="https://www.linkedin.com/in/yathunadh-krishnan-p-u-280883233">
-            <i className="bx bxl-linkedin-square"></i>
-          </a>
-          <a href="https://www.facebook.com/">
-            <i className="bx bxl-facebook-square"></i>
-          </a>
-          <a href="https://github.com/anonymousecode" title="anonymousecode">
-            <i className="bx bxl-github"></i>
-          </a>
-          <a href="https://www.instagram.com/_yn_k_/" title="_yn_k_">
-            <i className="bx bxl-instagram-alt"></i>
-          </a>
+        <div className="d-flex justify-content-center gap-3 mt-4">
+          <Link
+            to="https://www.linkedin.com/in/yathunadh-krishnan-p-u-280883233"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiLinkedin />
+          </Link>
+
+          <Link
+            to="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiFacebook />
+          </Link>
+
+          <Link
+            to="https://github.com/anonymousecode"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiGithub />
+          </Link>
+
+          <Link
+            to="https://www.instagram.com/_yn_k_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn "
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiInstagram />
+          </Link>
+
+          <Link
+            to="https://leetcode.com/u/anonymousecode01/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ fontSize: "1.5rem" }}
+          >
+            <SiLeetcode />
+          </Link>
         </div>
+
       </div>
     </div>
   );
