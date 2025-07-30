@@ -16,32 +16,30 @@ import Connect from './components/connect'
 
 
 function Start() {
-  const greetings = ['hi','hello','namaste','namaskaram','vanakam'];
+  const greetings = ['Hello','नमस्ते ','നമസ്കാരം','வணக்கம்','Hola','Bonjour'];
   const [index,setIndex]= useState(0);
-  const [showLink,setShowLink]=useState(false);
   const navigate = useNavigate();
 
   useEffect(()=> {
     if (index < greetings.length){
 
-      const timer = setTimeout(()=>{setIndex(prev=>prev+1);},500);
+      const timer = setTimeout(()=>{setIndex(prev=>prev+1);},300);
       return () => clearTimeout(timer);
     }
     else{
       const redirectTimer = setTimeout(()=>{
         navigate('/home');
-      },0);
+      },100);
       return () => clearTimeout(redirectTimer);
 
     }
   },[index,greetings.length]);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '20vh', fontSize: '2rem' }}>
-      {!showLink?(
-        <div>{greetings[index]}</div>
-      ):(
-      <Link to="/home" className='link' style={{ fontSize: '2.5rem', fontWeight: 'bold', textDecoration: 'none' }}>yn_k</Link>)}
+    <div className="space-grotesk" style={{ display: 'flex',flexDirection: 'column', justifyContent: 'center', alignItems: 'center',height: '100vh', fontSize: '2rem', textAlign: 'center',color: '#F47216'}} >
+        <div>
+          <h1 className='fw-bold fs-1' style={{color:'#F47216'}}>{greetings[index]}</h1>
+        </div>
     </div>
         
   );
