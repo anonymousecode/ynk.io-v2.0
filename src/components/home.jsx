@@ -6,11 +6,9 @@ import '../style.css';
 
 export default function Home() {
   const titles = [
-    "Frontend Developer",
-    "PHP Developer",
+    "Software Developer",
     "Tech Enthusiast",
-    "UI/UX Designer",
-    "Lifelong Learner"
+    "UI Designer",
   ];
 
   const [current, setCurrent] = useState(0);
