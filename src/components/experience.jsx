@@ -2,7 +2,7 @@ import Navbar from "./navbar";
 import "../style.css";
 
 export default function Experience() {
-    const journey = [
+    const journey = [        
         {
             year: "May 2022 - Jun 2023",
             company: "Tata Consultancy Services",
@@ -20,12 +20,20 @@ export default function Experience() {
             image: "/images/csis-logo.jpeg"
         },
         {
-            year: "June 2025 - Present",
+            year: "Dec 2023 - Jun 2025",
             company: "Mind Empowered",
             location: "Kochi, India",
             role: "Frontend Developer",
             type: "Internship",
             image: "/images/mindempowered.png"
+        },
+        {
+            year: "Aug 2025 - Present",
+            company: "Gescis Technologies",
+            location: "Trivandrum, India",
+            role: "Software Developer",
+            type: "Full Time",
+            image: "/images/gescis.png"
         }
     ];
 
